@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --grey: #64748b;
+        }
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+
+        body { 
+            background-color: var(--light); 
+            color: var(--dark); 
+            line-height: 1.6; 
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 1.5rem 5%; 
+            background: white; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 2rem; }
+        nav ul li a { text-decoration: none; color: var(--dark); font-weight: 600; transition: 0.3s; }
+        nav ul li a:hover { color: var(--primary); }
+
+        .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: -1px; }
+        .logo b { color: var(--primary); }
+
+        .hero {
+            height: 80vh; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: 1rem; }
+        .highlight { color: var(--primary); }
+        .hero p { font-size: 1.2rem; color: var(--grey); max-width: 600px; }
+
+        .container { padding: 5rem 10%; }
+        .section-title { margin-bottom: 3rem; text-align: center; font-size: 2.5rem; }
+
+        .project-grid {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white; 
+            padding: 1.5rem; 
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+
+        .project-img {
+            height: 200px; 
+            background: #e2e8f0; 
+            border-radius: 8px; 
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block; 
+            padding: 0.8rem 2rem; 
+            background: var(--primary);
+            color: white; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            margin-top: 1.5rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover { opacity: 0.9; transform: scale(1.05); }
+
+        footer {
+            text-align: center; 
+            padding: 5rem 10%; 
+            background: var(--dark); 
+            color: white;
+        }
+
+        footer h2 { margin-bottom: 1rem; }
+        footer p { color: #94a3b8; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PORTFOLIO<b>.</b></div>
+        <ul>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
+        <p>I'm a developer and designer building digital experiences that matter.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </header>
+
+    <section id="projects" class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-img">Image Placeholder</div>
+                <h3>Project One</h3>
+                <p>A brief description of the impact and the technology used to build this solution.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-img">Image Placeholder</div>
+                <h3>Project Two</h3>
+                <p>Solving complex problems with creative and efficient code architecture.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-img">Image Placeholder</div>
+                <h3>Project Three</h3>
+                <p>Ensuring responsive design and a seamless user experience across all devices.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Let's Connect</h2>
+        <p>Currently open to new opportunities and interesting collaborations.</p>
+        <a href="mailto:hello@example.com" class="btn">Email Me</a>
+    </footer>
+
+</body>
+</html>
