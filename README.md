@@ -1,2 +1,2 @@
-# Adhi
+# index
 practical no.25
